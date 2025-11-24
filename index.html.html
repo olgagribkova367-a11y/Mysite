@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Репетитор по английскому языку — Ольга Грибкова</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #ff6b6b; /* coral */
+      --bg2: #ffd93d; /* sunny */
+      --bg3: #6be4ff; /* sky */
+      --accent: #4b00ff; /* deep purple */
+      --glass: rgba(255,255,255,0.12);
+      --card: rgba(255,255,255,0.9);
+      --maxw: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:Poppins,system-ui,Segoe UI,Roboto,Arial,sans-serif; -webkit-font-smoothing:antialiased;
+      background: radial-gradient(1200px 600px at 10% 10%, var(--bg3), transparent 12%),
+                  radial-gradient(1000px 500px at 90% 90%, rgba(255,255,255,0.06), transparent 15%),
+                  linear-gradient(135deg,var(--bg1), var(--bg2));
+      color:#111;display:flex;align-items:center;justify-content:center;padding:40px;
+    }
+    .wrap{width:100%;max-width:var(--maxw);background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.8));border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,0.18);overflow:hidden;display:grid;grid-template-columns:1fr 420px;gap:0}
+
+    /* Left panel */
+    .left{padding:48px 56px}
+    header .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ff4d6d);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;box-shadow:0 6px 18px rgba(75,0,255,0.18)}
+    h1{font-family:Playfair Display, serif;margin:16px 0 6px;font-size:34px;color:var(--accent)}
+    p.lead{margin:0 0 18px;font-size:16px;line-height:1.45;color:#333}
+
+    .badges{display:flex;gap:10px;margin:16px 0}
+    .badge{background:var(--glass);padding:8px 12px;border-radius:999px;font-weight:600;font-size:13px;backdrop-filter:blur(6px)}
+
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+    .feature{background:linear-gradient(180deg,white,rgba(255,255,255,0.92));padding:12px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.06);display:flex;gap:12px;align-items:center}
+    .feature .emoji{font-size:20px}
+    .feature strong{display:block}
+    .cta-row{margin-top:22px;display:flex;gap:12px;align-items:center}
+    .btn{padding:12px 18px;border-radius:12px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#ff4d6d);color:white;box-shadow:0 8px 20px rgba(75,0,255,0.14)}
+    .btn-outline{background:transparent;border:2px solid rgba(75,0,255,0.12);color:var(--accent)}
+
+    /* Right panel */
+    .right{background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));padding:28px;border-left:6px solid rgba(255,255,255,0.06);display:flex;flex-direction:column;gap:18px;align-items:stretch}
+    .profile{display:flex;gap:16px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:16px;background:linear-gradient(135deg,#fff,#eee);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:28px;color:var(--accent);box-shadow:0 8px 18px rgba(0,0,0,0.08)}
+    .contact{display:flex;flex-direction:column}
+    .contact b{font-size:18px}
+    .small{font-size:13px;color:rgba(0,0,0,0.6)}
+
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 8px 22px rgba(0,0,0,0.06)}
+
+    .schedule{display:flex;gap:10px;flex-wrap:wrap}
+    .slot{padding:8px 12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(245,245,255,0.98));font-weight:600}
+
+    footer{margin-top:auto;font-size:13px;color:#333;display:flex;justify-content:space-between;align-items:center}
+
+    /* Accent animation */
+    .neon{position:relative}
+    .neon:before{content:"";position:absolute;inset:-40px;border-radius:18px;background:conic-gradient(from 180deg at 50% 50%, rgba(75,0,255,0.08), rgba(255,77,109,0.06), rgba(255,217,61,0.06));filter:blur(30px);z-index:-1;opacity:0.95}
+
+    /* Responsive */
+    @media (max-width:980px){.wrap{grid-template-columns:1fr;max-width:920px}.right{order:-1}}
+    @media (max-width:520px){body{padding:20px}.left{padding:24px}.right{padding:18px}.avatar{width:76px;height:76px}}
+
+    /* subtle floating animation for hero */
+    .hero-illus{width:140px;height:140px;border-radius:12px;background:linear-gradient(135deg,#fff,#f7f7ff);display:flex;align-items:center;justify-content:center;font-weight:800}
+    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+    .float{animation:floaty 4s ease-in-out infinite}
+  </style>
+</head>
+<body>
+  <div class="wrap neon" role="main">
+    <div class="left">
+      <header class="logo">
+        <div class="mark">AI</div>
+        <div>
+          <div style="font-weight:800;color:#222">Ольга Грибкова</div>
+          <div class="small">Репетитор по английскому языку • Онлайн</div>
+        </div>
+      </header>
+
+      <h1>Учите English с улыбкой ✨</h1>
+      <p class="lead">Персональные занятия — разговорная практика, подготовка к экзаменам, деловой английский и поддержка мотивации. Индивидуальная программа под ваши цели и уровень.</p>
+
+      <div class="badges">
+        <div class="badge">Опыт 10 лет</div>
+        <div class="badge">высшее педагогическое образование, сертификаты</div>
+        <div class="badge">Онлайн</div>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="emoji">💬</div>
+          <div>
+            <strong>Разговорный английский</strong>
+            <span class="small">Живые диалоги, ролевые игры</span>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="emoji">📈</div>
+          <div>
+            <strong>Подготовка к экзаменам</strong>
+            <span class="small">Wiseman / Cambridge</span>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="emoji">💼</div>
+          <div>
+            <strong>Деловой английский</strong>
+            <span class="small">Презентации, письма, переговоры</span>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="emoji">🎯</div>
+          <div>
+            <strong>Индивидуальный подход</strong>
+            <span class="small">План занятий под вашу цель</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <button class="btn btn-primary" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})">Записаться на пробное</button>
+        <button class="btn btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Связаться</button>
+      </div>
+
+      <section style="margin-top:26px">
+        <div class="card">
+          <h3 style="margin:0 0 8px">Почему со мной?</h3>
+          <p style="margin:0;color:#333">Я делаю упор на разговорную практику, системное закрепление и рост уверенности. Уроки живые и энергичные, с понятной домашней работой и регулярной обратной связью.</p>
+        </div>
+      </section>
+
+    </div>
+
+    <aside class="right">
+      <div class="profile">
+        <div class="avatar">ОГ</div>
+        <div class="contact">
+          <b>Ольга Грибкова — репетитор</b>
+          <div class="small">Онлайн (Zoom) • Санкт-Петербург</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 style="margin:0 0 8px">Набор групп / расписание</h4>
+        <div class="schedule">
+          <div class="slot">Пн 19:00 — Разговорный</div>
+          <div class="slot">Ср 18:00 — Экзамены</div>
+          <div class="slot">Сб 11:00 — Общий уровень</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 style="margin:0 0 8px">Отзывы</h4>
+        <blockquote style="margin:0 0 8px;font-style:italic;color:#333">"Ольга помогла мне подготовиться к экзаменам — занятия были мотивирующими и понятными." — Марина</blockquote>
+        <blockquote style="margin:0;font-style:italic;color:#333">"Гибкий график и практика, которая действительно работает." — Илья</blockquote>
+      </div>
+
+      <div class="card" id="contact">
+        <h4 style="margin:0 0 8px">Контакты</h4>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div class="small"><strong>Email:</strong> olga.english@mail.com</div>
+          <div class="small"><strong>Телефон:</strong> +7 909 385 2511</div>
+          <div class="small"><strong>Skype / Zoom:</strong> olga-tutor</div>
+        </div>
+      </div>
+
+      <form id="contact-form" class="card" onsubmit="event.preventDefault();alert('Спасибо! Я свяжусь с вами в ближайшее время. :)')">
+        <h4 style="margin:0 0 8px">Записаться на пробное</h4>
+        <input type="text" placeholder="Ваше имя" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #eee;margin-bottom:8px">
+        <input type="tel" placeholder="Телефон или мессенджер" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #eee;margin-bottom:8px">
+        <select style="width:100%;padding:10px;border-radius:10px;border:1px solid #eee;margin-bottom:8px">
+          <option>Выберите цель: Разговорный / Экзамен / Деловой</option>
+          <option>Разговорный</option>
+          <option>Wiseman/Cambridge</option>
+          <option>Деловой английский</option>
+        </select>
+        <button class="btn btn-primary" style="width:100%">Отправить</button>
+      </form>
+
+      <footer>
+        <div class="small">© 2025 Ольга Грибкова</div>
+        <div style="font-size:12px;opacity:0.9">Готовы начать? <button class="btn" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})" style="padding:6px 10px;border-radius:8px">Записаться</button></div>
+      </footer>
+    </aside>
+  </div>
+
+</body>
+</html>
